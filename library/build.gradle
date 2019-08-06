@@ -1,24 +1,24 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 26
 
     defaultConfig {
-        applicationId "com.sectionedactionbarlist"
-        minSdkVersion 15
-        targetSdkVersion 19
+
+        minSdkVersion 26
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
     }
     buildTypes {
         release {
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
